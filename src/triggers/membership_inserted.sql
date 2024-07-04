@@ -1,4 +1,4 @@
-create or replace function user_inserted () returns trigger as $$
+create or replace function membership_inserted () returns trigger as $$
     begin
         update
             discord_server
@@ -11,7 +11,7 @@ create or replace function user_inserted () returns trigger as $$
     end;
 $$ language plpgsql;
 
-create or replace trigger user_inserted_trigger
-after insert on discord_user
+create or replace trigger membership_inserted_trigger
+after insert on membership
 for each row
-execute procedure user_inserted ();
+execute procedure membership_inserted ();

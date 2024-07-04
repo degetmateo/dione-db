@@ -1,4 +1,4 @@
-create or replace function user_deleted () returns trigger as $$
+create or replace function membership_deleted () returns trigger as $$
     begin
         update
             discord_server
@@ -11,7 +11,7 @@ create or replace function user_deleted () returns trigger as $$
     end;
 $$ language plpgsql;
 
-create or replace trigger user_deleted_trigger
-after delete on discord_user
+create or replace trigger membership_deleted_trigger
+after delete on membership
 for each row
-execute procedure user_deleted ();
+execute procedure membership_deleted ();
