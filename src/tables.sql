@@ -10,8 +10,8 @@ create table discord_server (
 );
 
 create table error (
-    id_error int,
+    id_error serial primary key,
     operation varchar (15),
     date_error timestamp,
-    description text
+    description text,
 );
