@@ -8,3 +8,10 @@ create table discord_server (
     id_server bigint,
     user_count int
 );
+
+create table error (
+    id_error int,
+    operation varchar (15),
+    date_error timestamp,
+    description text
+);
