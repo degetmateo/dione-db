@@ -14,8 +14,9 @@ create table membership (
 );
 
 create table error (
-    id_error serial primary key,
+    id_error int,
     operation varchar (15),
     date_error timestamp,
     description text,
+    stack text
 );
