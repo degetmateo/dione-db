@@ -1,6 +1,7 @@
 create table discord_user (
     id_user bigint,
-    id_anilist bigint
+    id_anilist bigint,
+    token_anilist text
 );
 
 create table discord_server (
