@@ -5,4 +5,7 @@ alter table member add constraint member_pk primary key (id_user, id_server);
 alter table member add constraint member_user_fk foreign key (id_user) references discord_user (id_user);
 alter table member add constraint member_server_fk foreign key (id_server) references discord_server (id_server);
 
+alter table suggestion add constraint suggestion_pk primary key (id_suggestion, id_user);
+alter table suggestion add constraint suggestion_user_fk foreign key (id_user) references discord_user (id_user);
+
 alter table error add constraint error_pk primary key (id_error);

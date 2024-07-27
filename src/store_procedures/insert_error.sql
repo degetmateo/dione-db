@@ -13,7 +13,7 @@ create or replace function insert_error (
         values (
             nueva_id,
             _operation,
-            now(),
+            get_timestamp('America/Buenos_Aires'),
             _description,
             _stack
         );

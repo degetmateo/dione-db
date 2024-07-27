@@ -14,6 +14,11 @@ create or replace function membership_deleted () returns trigger as $$
 
         if not found then
             delete from
+                suggestion
+            where 
+                id_user = old.id_user;
+
+            delete from
                 discord_user
             where
                 id_user = old.id_user;

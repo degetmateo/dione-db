@@ -4,6 +4,13 @@ create table discord_user (
     token_anilist text
 );
 
+create table suggestion (
+    id_suggestion int,
+    id_user bigint,
+    date timestamp,
+    description text
+);
+
 create table discord_server (
     id_server bigint,
     user_count int
